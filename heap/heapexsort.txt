@@ -1,0 +1,46 @@
+#include<stdio.h>
+void printArray(int x[],int n)
+{
+int i;
+for(i=0;i<n;i++)
+printf("%d ",x[i]);
+printf("\n");
+}
+void show(int x[], int i)
+{
+int l=i*2 + 1;
+int t;
+if(x[i] < x[l])
+{
+t=x[i];
+x[i]=x[l];
+x[l]=t;
+
+}
+
+}
+void showloop(int x[],int n)
+{
+int i;
+for(i = (n/2)-1;i>=0;i--)
+{
+	show(x,i);
+	printArray(x,7);
+}
+}
+
+int main()
+{
+int i;
+int x[] = {1,2,3,4,5,6,7};
+showloop(x,7);
+printArray(x,7);
+return 0;
+}
+
+
+//output:
+//1 2 6 4 5 3 7 
+1 4 6 2 5 3 7 
+4 1 6 2 5 3 7 
+4 1 6 2 5 3 7 
